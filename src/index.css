@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Metro-Sans-Regular";
+  src: url(/fonts/MetroSans-Regular.woff);
+}
+
+@font-face {
+  font-family: "Metro-Sans-Bold";
+  src: url(/fonts/MetroSans-Bold.woff);
+}
+
+body {
+  background-color: black;
+}
