@@ -10,9 +10,11 @@ function Copy({ name, copyString }: Props) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(copyString);
-    setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 2000);
+    if (!showMessage) {
+      navigator.clipboard.writeText(copyString);
+      setShowMessage(true);
+      setTimeout(() => setShowMessage(false), 2000);
+    }
   };
 
   const handleMouseEnter = () => {
