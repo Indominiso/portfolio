@@ -33,7 +33,7 @@ const PhotosContent = () => {
               className="absolute top-0 left-0 h-full w-full "
               key={index}
               src={project.imgSrc}
-              alt={`Project ${index + 1}`}
+              alt={`Photo ${index + 1}`}
             />
           </div>
         ))}
