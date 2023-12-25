@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,6 +11,16 @@ const Modal = ({ isOpen, setIsOpen, content }: ModalProps) => {
     setIsOpen(null);
   };
 
+  const [opacity, setOpacity] = useState(0.5);
+
+  const handleMouseEnter = () => {
+    setOpacity(1);
+  };
+
+  const handleMouseLeave = () => {
+    setOpacity(0.5);
+  };
+
   return (
     <div
       className={`transition-all duration-300 ease-in-out fixed top-0 right-0 h-screen pr-[2rem] w-screen px-[4.2rem] bg-black transform z-50 flex flex-col justify-between ${
@@ -18,7 +28,16 @@ const Modal = ({ isOpen, setIsOpen, content }: ModalProps) => {
       }`}
     >
       <div className="mt-4">{content}</div>
-      <button className="text-2xl font-metrobold mb-2" onClick={closeModal}>
+      <button
+        className="text-2xl font-metrobold mb-2 transition-all duration-200 ease-in-out transform hover:scale-125"
+        onClick={closeModal}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          opacity: opacity,
+          transition: "opacity 0.2s ease-in-out, transform 0.2s ease-in-out",
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

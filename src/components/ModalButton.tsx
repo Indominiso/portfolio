@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useCallback } from "react";
 import Modal from "./Modal";
 
 interface Props {
@@ -10,28 +10,31 @@ interface Props {
 
 const ModalButton = ({ name, openSlide, setOpenSlide, content }: Props) => {
   const isOpen = openSlide === name;
-  const [opacity, setOpacity] = useState(0.5);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = useCallback(() => {
     setOpenSlide(isOpen ? null : name);
-  };
+  }, [isOpen, name, setOpenSlide]);
 
-  const handleMouseEnter = () => {
-    setOpacity(1);
-  };
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
 
-  const handleMouseLeave = () => {
-    setOpacity(0.5);
-  };
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false);
+  }, []);
 
   return (
     <div>
       <button
-        className=" text-white text-left text-[1.5rem] font-metroregular opacity${}"
+        className={`text-white text-left text-[1.5rem] font-metroregular transition-all duration-200 ease-in-out ${
+          isHovered
+            ? "opacity-100 transform translate-y-[-5px] translate-x-[5px]"
+            : "opacity-50 transform translate-y-[0px]"
+        }`}
         onClick={handleButtonClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ opacity: opacity }}
       >
         {name}
       </button>

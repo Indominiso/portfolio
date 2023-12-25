@@ -9,6 +9,11 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+      translate: ["hover", "focus", "active"],
+    },
+  },
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {

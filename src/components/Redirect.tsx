@@ -6,17 +6,14 @@ interface Props {
 }
 
 function Redirect({ name, redirectLink }: Props) {
-  const [opacity, setOpacity] = useState(0.5);
-  const [transform, setTransform] = useState("translateY(0px)");
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    setOpacity(1);
-    setTransform("translateY(-5px) translateX(5px)");
+    setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setOpacity(0.5);
-    setTransform("translateY(0px)");
+    setIsHovered(false);
   };
 
   const RedirectIcon = () => (
@@ -30,8 +27,9 @@ function Redirect({ name, redirectLink }: Props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="inline-block ml-1"
-      style={{ opacity: opacity, transform: transform }}
+      className={`inline-block ml-1 transition-all duration-200 ease-in-out ${
+        isHovered ? "opacity-100" : "opacity-50"
+      }`}
     >
       <line x1="7" y1="17" x2="17" y2="7"></line>
       <polyline points="7 7 17 7 17 17"></polyline>
@@ -45,13 +43,18 @@ function Redirect({ name, redirectLink }: Props) {
       onMouseLeave={handleMouseLeave}
     >
       <a href={redirectLink} target="_blank">
-        <button
-          className="font-metroregular text-left text-white text-[1.5rem]"
-          style={{ opacity: opacity }}
+        <div
+          className={`transition-all duration-200 ease-in-out ${
+            isHovered
+              ? "opacity-100 transform translate-y-[-5px] translate-x-[5px]"
+              : "opacity-50"
+          }`}
         >
-          {name}
-        </button>
-        <RedirectIcon />
+          <button className="font-metroregular text-left text-white text-[1.5rem]">
+            {name}
+          </button>
+          <RedirectIcon />
+        </div>
       </a>
     </ul>
   );
