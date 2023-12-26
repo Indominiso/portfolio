@@ -40,7 +40,7 @@ function App() {
           />
         </ButtonContainer>
         <ButtonContainer name="Contact">
-          <Copy name="Email" copyString="suckomydicko" />
+          <Copy name="Email" copyString="wip" />
           <Redirect
             name="Discord"
             redirectLink="https://discordapp.com/users/618112370845286426"
