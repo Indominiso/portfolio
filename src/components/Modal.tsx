@@ -27,7 +27,7 @@ const Modal = ({ isOpen, setIsOpen, content }: ModalProps) => {
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
-      <div className="mt-4">{content}</div>
+      <div className="mt-4 flex-grow">{content}</div>
       <button
         className="text-2xl font-metrobold mb-2 transition-all duration-200 ease-in-out transform hover:scale-125 fixed bottom-0 left-0 right-0 mx-auto"
         onClick={closeModal}
