@@ -23,13 +23,13 @@ const Modal = ({ isOpen, setIsOpen, content }: ModalProps) => {
 
   return (
     <div
-      className={`transition-all duration-300 ease-in-out fixed top-0 right-0 h-screen pr-4 w-full px-4 sm:px-6 bg-black transform z-50 flex flex-col justify-between ${
+      className={`transition-all duration-300 ease-in-out fixed top-0 right-0 h-screen pr-[1rem] w-full px-[2rem] sm:px-[4.2rem] bg-black transform z-50 flex flex-col justify-between ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
-      <div className="mt-4 overflow-y-auto flex-grow mb-16">{content}</div>
+      <div className="mt-4">{content}</div>
       <button
-        className="text-2xl font-metrobold transition-all duration-200 ease-in-out transform hover:scale-125 fixed bottom-0 right-0 mb-4 mr-4"
+        className="text-2xl font-metrobold mb-2 transition-all duration-200 ease-in-out transform hover:scale-125"
         onClick={closeModal}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
