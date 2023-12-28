@@ -48,7 +48,7 @@ const ProjectsContent = () => {
 
   return (
     <div className="h-[calc(100vh-4rem-50px)] scrollbar-hide overflow-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scrollbar-hide w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 scrollbar-hide w-full mb-0 sm:mb-4">
         {projects.map((project, index) => (
           <Project
             key={index}
@@ -61,4 +61,5 @@ const ProjectsContent = () => {
     </div>
   );
 };
+
 export default ProjectsContent;
