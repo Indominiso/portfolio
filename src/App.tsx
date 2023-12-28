@@ -16,7 +16,7 @@ function App() {
       <Header
         name="Indominiso"
         description="Transforming your vision into reality."
-        description2="Copyright © 2024 Indominiso. All rights reserved. AAA"
+        description2="Copyright © 2024 Indominiso. All rights reserved."
         slideOpen={openSlide !== null}
       >
         <ButtonContainer name="Work">

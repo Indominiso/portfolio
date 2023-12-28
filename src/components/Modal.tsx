@@ -27,9 +27,9 @@ const Modal = ({ isOpen, setIsOpen, content }: ModalProps) => {
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
-      <div className="mt-4 overflow-y-auto flex-grow">{content}</div>
+      <div className="mt-4 overflow-y-auto flex-grow mb-16">{content}</div>
       <button
-        className="text-2xl font-metrobold mb-2 transition-all duration-200 ease-in-out transform hover:scale-125"
+        className="text-2xl font-metrobold transition-all duration-200 ease-in-out transform hover:scale-125 fixed bottom-0 right-0 mb-4 mr-4"
         onClick={closeModal}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
