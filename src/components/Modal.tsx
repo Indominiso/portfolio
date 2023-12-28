@@ -23,7 +23,7 @@ const Modal = ({ isOpen, setIsOpen, content }: ModalProps) => {
 
   return (
     <div
-      className={`transition-all duration-300 ease-in-out fixed top-0 right-0 h-screen pr-[2rem] w-full px-[2rem] sm:px-[4.2rem] bg-black transform z-50 flex flex-col justify-between ${
+      className={`transition-all duration-300 ease-in-out fixed top-0 right-0 h-screen pr-[1rem] w-full px-[2rem] sm:px-[4.2rem] bg-black transform z-50 flex flex-col justify-between ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
