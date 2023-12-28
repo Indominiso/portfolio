@@ -17,7 +17,7 @@ function Header({
 }: Props) {
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen bg-black flex justify-center items-center transform ${
+      className={`fixed top-0 left-0 w-full h-screen bg-black flex justify-center items-center transform ${
         slideOpen ? "translate-x-[-1rem]" : ""
       } transition-transform duration-300 ease-in-out`}
     >
