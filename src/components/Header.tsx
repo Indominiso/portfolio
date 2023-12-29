@@ -21,7 +21,7 @@ function Header({
         slideOpen ? "translate-x-[-1rem]" : ""
       } transition-transform duration-300 ease-in-out`}
     >
-      <div className="w-full max-w-3xl flex flex-col space-y-10 text-white p-4 text-left">
+      <div className="w-full max-w-3xl flex flex-col  text-white p-4 text-left">
         <h1 className="font-metrobold text-[2rem] leading-none">{name}</h1>
         {children}
         <p className="font-metrobold text-[2rem] leading-snug">

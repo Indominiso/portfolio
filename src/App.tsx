@@ -19,6 +19,12 @@ function App() {
         description2="Copyright © 2024 Indominiso. All rights reserved."
         slideOpen={openSlide !== null}
       >
+        <ModalButton
+          name="About Me"
+          openSlide={openSlide}
+          setOpenSlide={setOpenSlide}
+          content={<StoreContent />}
+        />
         <ButtonContainer name="Work">
           <ModalButton
             name="Projects"
@@ -31,12 +37,6 @@ function App() {
             openSlide={openSlide}
             setOpenSlide={setOpenSlide}
             content={<PhotosContent />}
-          />
-          <ModalButton
-            name="Store"
-            openSlide={openSlide}
-            setOpenSlide={setOpenSlide}
-            content={<StoreContent />}
           />
         </ButtonContainer>
         <ButtonContainer name="Contact">
@@ -56,3 +56,12 @@ function App() {
 }
 
 export default App;
+
+/*
+     <ModalButton
+            name="Store"
+            openSlide={openSlide}
+            setOpenSlide={setOpenSlide}
+            content={<StoreContent />}
+          />
+*/
