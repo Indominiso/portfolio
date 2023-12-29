@@ -22,9 +22,11 @@ function Header({
       } transition-transform duration-300 ease-in-out`}
     >
       <div className="w-full max-w-3xl flex flex-col  text-white p-4 text-left">
-        <h1 className="font-metrobold text-[2rem] mb-1 leading-none">{name}</h1>
+        <h1 className="font-metrobold text-[2rem] mb-[0.5rem] leading-none">
+          {name}
+        </h1>
         {children}
-        <p className="font-metrobold text-[2rem] leading-snug mt-6">
+        <p className="font-metrobold text-[2rem] leading-snug mt-[2rem]">
           <ul>{description}</ul>
           <ul
             className="font-metroregular text-[1.5rem] opacity-50"

@@ -45,7 +45,7 @@ function ModalRedirect({ name, redirectLink }: Props) {
       <div
         className={`transition-all duration-200 ease-in-out ${
           isHovered
-            ? "opacity-100 transform translate-y-[-5px] translate-x-[5px]"
+            ? "opacity-100 transform -translate-y-[0.25rem] translate-x-[0.5rem]"
             : "opacity-50 transform translate-y-0 translate-x-0"
         }`}
       >

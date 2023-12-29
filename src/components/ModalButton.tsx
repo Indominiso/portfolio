@@ -29,8 +29,8 @@ const ModalButton = ({ name, openSlide, setOpenSlide, content }: Props) => {
       <button
         className={`text-white text-left text-[1.5rem] font-metroregular  transition-all duration-200 ease-in-out ${
           isHovered
-            ? "opacity-100 transform translate-x-[15px]"
-            : "opacity-50 transform translate-x-[0px]"
+            ? "opacity-100 transform translate-x-[1.5rem]"
+            : "opacity-50 transform translate-x-0"
         }`}
         onClick={handleButtonClick}
         onMouseEnter={handleMouseEnter}

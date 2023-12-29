@@ -7,6 +7,7 @@ import ModalButton from "./components/ModalButton";
 import ProjectsContent from "./components/ProjectsContent";
 import StoreContent from "./components/StoreContent";
 import PhotosContent from "./components/PhotosContent";
+import AboutContent from "./components/AboutContent";
 
 function App() {
   const [openSlide, setOpenSlide] = useState<string | null>(null);
@@ -23,7 +24,7 @@ function App() {
           name="About Me"
           openSlide={openSlide}
           setOpenSlide={setOpenSlide}
-          content={<StoreContent />}
+          content={<AboutContent />}
         />
         <ButtonContainer name="Work">
           <ModalButton
