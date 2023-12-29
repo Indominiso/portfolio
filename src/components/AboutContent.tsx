@@ -5,10 +5,9 @@ interface AboutData {
 
 const AboutContent = () => {
   const aboutInfo: AboutData[] = [
-    { title: "Name", description: "Your Name" },
-    { title: "Profession", description: "Your Profession" },
-    { title: "Hobbies", description: "Your Hobbies" },
-    // Add more about info here
+    { title: "", description: " " },
+    { title: "", description: " " },
+    { title: "", description: " " },
   ];
 
   return (

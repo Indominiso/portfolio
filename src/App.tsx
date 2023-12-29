@@ -39,7 +39,7 @@ function App() {
             content={<PhotosContent />}
           />
         </ButtonContainer>
-        <ButtonContainer name="Contact.">
+        <ButtonContainer name="Contact">
           <Copy name="Email" copyString="wip" />
           <Redirect
             name="Discord"
