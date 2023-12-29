@@ -5,7 +5,6 @@ import Redirect from "./components/Redirect";
 import Copy from "./components/Copy";
 import ModalButton from "./components/ModalButton";
 import ProjectsContent from "./components/ProjectsContent";
-import StoreContent from "./components/StoreContent";
 import PhotosContent from "./components/PhotosContent";
 import AboutContent from "./components/AboutContent";
 
