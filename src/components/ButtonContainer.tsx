@@ -8,7 +8,9 @@ interface Props {
 function ButtonContainer({ name, children }: Props) {
   return (
     <div>
-      <h2 className="text-left text-[2rem] font-metrobold">{name}</h2>
+      <h2 className="text-left text-[2rem] font-metrobold mt-[2rem] -mb-[0.5rem]">
+        {name}
+      </h2>
       {children}
     </div>
   );

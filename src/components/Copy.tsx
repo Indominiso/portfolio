@@ -68,9 +68,7 @@ function Copy({ name, copyString }: Props) {
     >
       <div
         className={`transition-all duration-200 ease-in-out ${
-          isHovered
-            ? "opacity-100 transform translate-y-[-5px] translate-x-[5px]"
-            : "opacity-50"
+          isHovered ? "opacity-100 transform translate-x-[15px]" : "opacity-50"
         }`}
         onClick={handleCopy}
       >

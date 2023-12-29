@@ -27,8 +27,8 @@ function Redirect({ name, redirectLink }: Props) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`inline-block ml-1 transition-all duration-200 ease-in-out ${
-        isHovered ? "opacity-100" : "opacity-50"
+      className={`inline-block ml-1 transition-all duration-200 ease-in-out delay-150 ${
+        isHovered ? "opacity-100 scale-110 shadow-lg" : "opacity-50"
       }`}
     >
       <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -46,7 +46,7 @@ function Redirect({ name, redirectLink }: Props) {
         <div
           className={`transition-all duration-200 ease-in-out ${
             isHovered
-              ? "opacity-100 transform translate-y-[-5px] translate-x-[5px]"
+              ? "opacity-100 transform translate-x-[15px]"
               : "opacity-50"
           }`}
         >
